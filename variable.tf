@@ -1,5 +1,5 @@
 variable "region" {
-  default = "us-east-1"
+  description = "AWS region"
 }
 variable "zone" {
   description = "availability zones"
@@ -9,6 +9,9 @@ variable "cidr_block" {
   description = "cidr blocks for vpc and subnets"
   type        = list(string)
 }
-variable "route" {
-  description = "default route table"
+variable "route" {}
+variable "instance_type" {}
+variable "my_ip" {
+  description = "Your IP address with CIDR notation"
 }
+

@@ -4,6 +4,7 @@ provider "aws" {
 
 resource "aws_vpc" "development_vpc" {
   cidr_block = var.cidr_block[0]
+
   tags = {
     Name = "development"
   }
@@ -82,5 +83,6 @@ resource "aws_route_table_association" "priv_2_association" {
   subnet_id      = aws_subnet.development_subnet_priv_2.id
   route_table_id = aws_route_table.development_private_rt.id
 }
+
 
 
